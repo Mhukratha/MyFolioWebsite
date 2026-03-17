@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body>
+		<nav class="navbar">
+			<ul>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#about">About me</a></li>
+				<li><a href="#work">My work</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<section id="home" class="hero-section">
+				<div class="content-wrapper">
+					<h1 class="title">Developer <span class="dim">Portfolio</span></h1>
+					<p class="subtitle">welcome to <span class="purple">my page</span></p>
+					
+					<div class="description">
+						<p>
+							Motivated Junior Software Developer with hands-on experience in <span class="highlight">C# 
+							and Unity</span>, strong in programming logic, debugging, and system implementation. 
+							Eager to learn, adaptable, and seeking an entry-level position to contribute to 
+							software development projects in a team-based environment.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<section id="about" class="about-section">
+				<div class="container">
+					<h2 class="bg-title">About<span> Me</span></h2>
+
+					<div class="about-grid">
+						<div class="about-info">
+							<h3>I'm Yossawin Kasiphongphaisan</h3>
+							<p>
+								I'm a Junior Software Developer with a strong interest in writing clear, 
+								maintainable code and building systems that work reliably in real use cases. 
+								I enjoy working with structured logic, understanding how systems behave, 
+								and improving performance through careful debugging and iteration.
+							</p>
+						</div>
+						<div class="about-image">
+							<img src="/img/Yossawin.png" alt="Yossawin">
+						</div>
+					</div>
+
+					<div class="skills-box">
+						<div class="skills-tabs">
+							<button class="tab-btn active">Technical Skill</button>
+							<button class="tab-btn inactive">Professional Strengths</button>
+							<button class="tab-btn inactive">ADDITIONAL SKILL</button>
+						</div>
+						
+						<div class="skills-content">
+							<div class="skills-grid">
+								<div class="skill-card">
+									<img src="/img/unity.png" alt="Unity">
+									<span>Unity (Intermediate-Advanced)</span>
+								</div>
+								<div class="skill-card">
+									<img src="/img/blender.png" alt="Blender">
+									<span>Blender (Intermediate-Advanced)</span>
+								</div>
+								<div class="skill-card">
+									<img src="/img/unreal.png" alt="unreal">
+									<span>Unreal Engine (Intermediate)</span>
+								</div>
+								<div class="skill-card">
+									<img src="/img/csharp.png" alt="csharp">
+									<span>C# (Intermediate)</span>
+								</div>
+								<div class="skill-card">
+									<img src="/img/html5.png" alt="html5">
+									<span>HTML5/CSS (Intermediate)</span>
+								</div>
+								<div class="skill-card">
+									<img src="/img/github.png" alt="github">
+									<span>GitHub (Intermediate)</span>
+								</div>
+								<div class="skill-card">
+									<img src="/img/maya.png" alt="maya">
+									<span>Maya (Intermediate)</span>
+								</div>
+								<div class="skill-card">
+									<img src="/img/figma.png" alt="figma">
+									<span>Figma (Intermediate)</span>
+								</div>
+								<div class="skill-card">
+									<img src="/img/unity.png" alt="Unity">
+									<span>-------</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
+
+	<style is:global>
+  /* 1. Global Setup */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at top right, #3d3d3d, #000); /* ไล่สีพื้นหลังมืดๆ */
+    color: white;
+    font-family: 'Inter', sans-serif;
+  }
+
+  /* 2. Navbar - กึ่งกลางและสีชมพูตามรูป */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+    z-index: 100;
+  }
+  .navbar ul {
+    display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		justify-items: center;
+    list-style: none;
+    gap: 60px;
+		padding: 0;
+		margin: 0;
+  }
+  .navbar a {
+    text-decoration: none;
+    color: #ff99cc; 
+    font-weight: 500;
+    transition: 0.5s;
+  }
+  .navbar a:hover { color: white; }
+
+  /* 3. Hero Section (Home) */
+  .hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+		justify-items: center;
+    padding: 0 10%;
+  }
+	.description{ display: grid; grid-template-columns: 1fr 1fr;}
+  .title { font-size: 3.5rem; margin-bottom: 10px; }
+  .title .dim { color: #888; font-weight: 300; }
+  .subtitle { color: #b084ff; font-size: 1.2rem; margin: 0;}
+
+  /* 4. About Section  */
+
+  .about-section {
+    min-height: 100vh;
+    padding: 100px 10%;
+    position: relative;
+  }
+	.about-grid{
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+		justify-content: center;
+		margin-top: 50px;
+		margin-bottom: 50px;
+	}
+	.about-info{
+		padding: 50px;
+		h3
+		{
+			font-size: 3em;
+			font-family: cursive;
+			margin: 0;
+		}
+		}
+  .bg-title {
+    font-size: 4rem;
+    text-align: center;
+    color: #3b3b3b; 
+    margin-bottom: 20px;
+		margin-top: 0;
+  }
+  .bg-title span { color: #d4af37; } /* คำว่า me สีทองจางๆ */
+
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .about-image { 
+		text-align: center; 
+	}
+  .about-image img {
+    width: 300px; 
+    filter: drop-shadow(0 0 30px rgba(248, 247, 247, 0.1)) contrast(150%);
+  }
+
+  /* 5. Skills Grid (แผง 9 ช่อง) */
+  .skills-box {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .skills-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .tab-btn {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  .tab-btn.active { background: white; color: black; }
+  .tab-btn.inactive { background: #000000; color: white; border: 1px solid #444; }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  .skill-card {
+    background: #b8b5b5; /* สีเทาตามรูป */
+    height: 110px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #222;
+    font-size: 0.7rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+  }
+  .skill-card img { width: 35px; margin-bottom: 10px; opacity: 0.8; }
+
+	@media (max-width: 768px) {
+
+
+
+		.bg-title  {
+			font-size: 3em;
+		}
+		.about-grid{
+			grid-template-columns: 1fr;
+			
+			.about-info{
+				order: 2;
+				font-size: 60%;
+			}
+			.about-image{	order: 1}
+			.about-image img{width: 50%;}
+		}
+		
+		
+	}
+</style>
