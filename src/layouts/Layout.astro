@@ -12,8 +12,8 @@
 		<nav class="navbar">
 			<ul>
 				<li><a href="#home">Home</a></li>
-				<li><a href="#about">About me</a></li>
-				<li><a href="#work">My work</a></li>
+				<li><a href="#about">AboutMe</a></li>
+				<li><a href="#work">MyWork</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
@@ -41,15 +41,11 @@
 					<div class="about-grid">
 						<div class="about-info">
 							<h3>I'm Yossawin Kasiphongphaisan</h3>
-							<p>
-								I'm a Junior Software Developer with a strong interest in writing clear, 
-								maintainable code and building systems that work reliably in real use cases. 
-								I enjoy working with structured logic, understanding how systems behave, 
-								and improving performance through careful debugging and iteration.
+							<p>I'm a Junior Software Developer with a strong interest in writing clear, maintainable code and building systems that work reliably in real use cases. 
 							</p>
 						</div>
 						<div class="about-image">
-							<img src="/img/Yossawin.png" alt="Yossawin">
+							<img src="/my-MyFolioWebpage/img/Yossawin.png" alt="Yossawin">
 						</div>
 					</div>
           <!-------------------- Skill ----------------------->
@@ -61,42 +57,52 @@
 						<div class="skills-content">
 							<div class="skills-grid" id="skills-grid-container">
 								<div class="skill-card">
-									<img src="/img/unity.png" alt="Unity">
+									<img src="/my-MyFolioWebpage/img/unity.png" alt="Unity">
 									<span>Unity (Intermediate-Advanced)</span>
 								</div>
 								<div class="skill-card">
-									<img src="/img/blender.png" alt="Blender">
+									<img src="/my-MyFolioWebpage/img/blender.png" alt="Blender">
 									<span>Blender (Intermediate-Advanced)</span>
 								</div>
 								<div class="skill-card">
-									<img src="/img/unreal.png" alt="unreal">
+									<img src="/my-MyFolioWebpage/img/unreal.png" alt="unreal">
 									<span>Unreal Engine (Intermediate)</span>
 								</div>
 								<div class="skill-card">
-									<img src="/img/csharp.png" alt="csharp">
+									<img src="/my-MyFolioWebpage/img/csharp.png" alt="csharp">
 									<span>C# (Intermediate)</span>
 								</div>
 								<div class="skill-card">
-									<img src="/img/html5.png" alt="html5">
+									<img src="/my-MyFolioWebpage/img/html5.png" alt="html5">
 									<span>HTML5/CSS (Intermediate)</span>
 								</div>
 								<div class="skill-card">
-									<img src="/img/github.png" alt="github">
+									<img src="/my-MyFolioWebpage/img/github.png" alt="github">
 									<span>GitHub (Intermediate)</span>
 								</div>
 								<div class="skill-card">
-									<img src="/img/maya.png" alt="maya">
+									<img src="/my-MyFolioWebpage/img/maya.png" alt="maya">
 									<span>Maya (Intermediate)</span>
 								</div>
 								<div class="skill-card">
-									<img src="/img/figma.png" alt="figma">
+									<img src="/my-MyFolioWebpage/img/figma.png" alt="figma">
 									<span>Figma (Intermediate)</span>
 								</div>
 								<div class="skill-card">
-									<img src="/img/unity.png" alt="Unity">
+									<img src="/my-MyFolioWebpage/img/unity.png" alt="Unity">
 									<span>-------</span>
 								</div>
 							</div>
+						</div>
+          <!-------------------- Skill ----------------------->    
+
+            <div class="about-info">
+							<p> I enjoy working with structured logic, understanding how systems behave, and improving performance through careful debugging and iteration. 
+							</p>
+              <p> My experience comes from project-based development using C# and Unity, where I’ve implemented core systems, handled problem-solving tasks, and collaborated closely with team members. I’m comfortable learning new tools, adapting to different requirements, and continuously improving my technical skills.
+							</p>
+              <p> I’m currently seeking an entry-level position where I can grow as a developer, contribute to a development team, and work on meaningful software projects.
+							</p>
 						</div>
 					</div>
 				</div>
@@ -108,21 +114,21 @@
         <div class="work-container">
           <div class="project-tabs">
             <div class="project-item active" data-project="project1">
-                <img src="/img/IMS.png" alt="I Must Survive">
+                <img src="/my-MyFolioWebpage/img/IMS.png" alt="I Must Survive">
                 <div class="project-mini-desc">
                 <strong>I must survive</strong>
                 <span>( 3D Third-Person Zombie Stealth )</span>
                 </div>
             </div>
             <div class="project-item" data-project="project2">
-              <img src="/img/IMS.png" alt="Verse of Cursed">
+              <img src="/my-MyFolioWebpage/img/IMS.png" alt="Verse of Cursed">
               <div class="project-mini-desc">
               <strong>Aenalia</strong>
               <span> ( The Foundation Desktop Application For EN-Card (NFT) )</span>
               </div>
             </div>
             <div class="project-item" data-project="project3">
-              <img src="/img/IMS.png" alt="NeonRush">
+              <img src="/my-MyFolioWebpage/img/IMS.png" alt="NeonRush">
               <div class="project-mini-desc">
               <strong> Verse of Cursed</strong>
               <span> ( BU GAME ON! final pitching round )</span>
@@ -165,7 +171,16 @@
     background: radial-gradient(circle at top right, #3d3d3d, #000);
     color: white;
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
   }
+
+  .container {
+  width: 100%;
+  max-width: 1200px; /* จอคอมกว้างสุดเท่านี้ */
+  margin: 0 auto;
+  padding: 0 5%;     /* จอเล็กจะมีช่องว่างข้างละ 5% ไม่ให้ตัวหนังสือติดขอบ */
+  box-sizing: border-box;
+}
   /* ------------------------------ Navbar --------------------------- */
   .navbar {
     position: fixed;
@@ -173,7 +188,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: auto;
-    
+    max-width: 90%;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     padding: 15px 40px;
@@ -184,33 +199,62 @@
   .navbar ul {
     display: flex;
     list-style: none;
-    gap: 40px;
+    gap: clamp(15px, 3vw, 40px);
     padding: 0;
     margin: 0;
+    flex-wrap: nowrap;
   }
   .navbar a {
     text-decoration: none;
     color: #ff99cc;
-    font-weight: 500;
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
     transition: 0.5s;
   }
   .navbar a:hover { color: white; }
+
+  /* --------------------------- wrapper ----------------------------------*/
+
+.content-wrapper{
+  width: 100%;
+  max-width: 1200px; /* จอคอมกว้างสุดเท่านี้ */
+  margin: 0 auto;
+  padding: 0 5%;     /* จอเล็กจะมีช่องว่างข้างละ 5% ไม่ให้ตัวหนังสือติดขอบ */
+  box-sizing: border-box;
+}
+
   /* --------------------------- Home ----------------------------------*/
   .hero-section {
-    height: 120vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 10%;
+    margin: 0 auto;
   }
-	.description{ display: grid; grid-template-columns: 1fr 1fr;}
-  .title { font-size: 3.5rem; margin-bottom: 10px; }
-  .title .dim { color: #888; font-weight: 300; }
-  .subtitle { color: #b084ff; font-size: 1.2rem; margin: 0;}
+	
+  .title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    line-height: 1.1;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+  }
+  .title .dim {
+    color: #d12297;
+    font-weight: 300;
+    
+  }
+  .subtitle { color: #b084ff;
+    font-size: 1.2rem;
+    margin-top: 1em;
+    font-family:'Times New Roman', Times, serif
+  }
+  .description{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
   /*  ---------------------- About Section ----------------------------- */
   .about-section {
-    min-height: 150vh;
+    min-height: 100vh;
     padding: 100px 10%;
-    position: relative;
   }
   .bg-title {
     font-size: 3rem;
@@ -222,54 +266,51 @@
   .bg-title span { color: #d4af37; }
   
 	.about-grid{
-    display: flex;
-    flex-direction: row;
-		align-items: center;
-    margin: 5% 10% 4% 10%;
-    gap: 10%;
-  }
-	.about-info{
-    flex-grow: 2;
-		h3
-		{
-			font-size: 3em;
-			font-family: cursive;
-			margin: 0;
-		}
-    p
-    {
-      font-size: 1.25em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    gap: 50px;
+    margin: 5% 0;
+    justify-content: center;
 
-    }
-		}
+    max-width: 1000px;       
+    margin: 5% auto;        
+    gap: 50px;              
+    width: 100%;
+  }
+  .about-info {
+    flex: 2;
+    text-align: left;
+  }
+	.about-info h3 { font-size: clamp(2rem, 5vw, 3rem); font-family: cursive; margin: 0;}
+  .about-info p { font-size: clamp(0.5rem, 5vw, 1.5rem); font-family: cursive; color: #5c9da1; line-height: 1.5;}
   .about-image {
-    flex-grow: 1;
-		text-align: center;
-
-    img {
-    width: 300px;
-    filter: drop-shadow(0 0 30px rgba(248, 247, 247, 0.1)) contrast(150%);
-    }
+    flex: 1;
+    display: flex;
+    justify-content: center;
   }
-  /* ----------------------------- Skills Grid ------------------------------*/
+  .about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.1));
+  }
+    /* ----------------------------- Skills Grid ------------------------------*/
   .skills-tabs {
     display: flex;
     gap: 15px;
     justify-content: center;
-    justify-items:center ;
-    flex-wrap: nowrap;
-    width: 100%;
     max-width:1000px;
-    margin: 0.5em auto;
+    margin: 10px auto;
   }
   .tab-btn {
     flex: 1;
-    width: auto;
-    padding: 15px 5px;
-    border: none;
-    border-radius: 8px;
+    min-width: 0;
+    padding: 20px 5px;
     cursor: pointer;
-    font-weight: bold;
+    font-size: clamp(0.7rem, 2vw, 0.9rem);
+    white-space: nowrap;
+    border-radius: 1em;
   }
   .tab-btn.active { 
     background: rgb(255, 254, 254); 
@@ -277,22 +318,23 @@
     transform: translateY(10px);
     transition: all 0.2s;
   }
-  .tab-btn.inactive { background: #000000; color: white; border: 1px solid #6d6c6c; }
+  .tab-btn.inactive {
+    background: #000000;
+    color: white;
+    border: 1px solid #6d6c6c;
+  }
   .skills-content {
     background: white;
     border-radius: 15px;
-    padding: 20px;
+    padding: clamp(15px, 3vw, 30px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    flex-direction: column;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 0 auto 10% auto;
   }
   .skills-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    width: 100%;
-    max-width: 1000px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
   }
   .skill-card {
     background: #ececec;
@@ -317,35 +359,41 @@
   .skill-card img { width: 40px; margin-bottom: 10px; opacity: 0.7; }
 	/* ------------------------------------- My Work Section ------------------------------------ */
 .work-section {
-  min-height: 100vh;
-  padding: 100px 15%;
-  position: relative;
+  padding: 100px 5%;
 }
 /* ----------------------------- PJ tab-------------------------- */
+.work-container{
+  margin: 5% auto;
+  max-width: 1000px;
+  justify-items: center;
+}
 .project-tabs {
-  gap: 20px;
   display: flex;
   justify-content: center;
 	overflow-x: visible;
   overflow-y: visible;
-  margin-top: 2%;
+  gap: clamp(10px, 2vw, 20px);
+  margin: 0 auto 20px;
   transition: all 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 .project-item {
   background: #000000;
+  flex: 1;
   border-radius: 15px ;
   cursor: pointer;
-  transition: 0.3s;
-  opacity: 0.5;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  min-width: 0;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  opacity: 0.6;
 }
 .project-item.active {
   background: #f5f5f5;
   opacity: 1;
-  flex-grow: 1;
+  flex: 2;
   transform: translateY(-10px);
   transition: all 0.5s;
-  strong{
+  strong
+  {
     color: #000;
   }
   span{
@@ -417,6 +465,7 @@
 /* --------------------------    MEdia    -------------------------- */
 
 @media (max-width: 768px) {
+  .navbar { padding: 10px 20px; }
   .skills-tabs {
     flex-direction: column;
     align-items: stretch;
@@ -430,10 +479,7 @@
   .bg-title  {
     font-size: 3em;
   }
-  .about-grid{
-    gap: 10;
-    flex-wrap: wrap;
-  }
+  .about-grid { text-align: center; }
   .about-info{
       font-size: 70%;
   }
@@ -447,69 +493,50 @@
   .work-details-box { border-radius: 20px; padding: 20px; }
   
   .project-tabs {
-    justify-content: center;
+    flex-direction: row;
     overflow-x: auto;
-    gap: 10px;
-    padding: 20px 15px;
-    width: 100%;
-    
-    -webkit-overflow-scrolling: touch;
+    justify-content: flex-start;
+    padding: 10px;
   }
   .project-item {
-    flex: 1em;
-    min-width: unset;
-    max-width: unset;
-    height: 50%;
+    flex: 0 0 70%;
   }
   .project-item.active {
-    transform: translateY(-5px);
-    span{
-    display: none;
-    color: #000;
-  }
-  }
-  .project-mini-desc{
-  justify-items:self-start;
+    flex: 0 0 80%;
   }
   .project-item img {
     height: 50%;
   }
-  .project-mini-desc {
-    padding: 8px;
-    font-size: 0.6rem;
-  }
-  .project-mini-desc strong {
-    font-size: 0.75rem;
-  }
-}
+  .project-mini-desc strong { font-size: 1rem; }
+  /* .project-mini-desc span { display: none !important; } */
+  } 
 </style>
 
 <!-------------------- Java ----------------------->
 <script is:inline>
 		const skillsData = {
   technical: [
-    { name: "Unity (Intermediate-Advanced)", img: "/img/unity.png" },
-    { name: "Blender (Intermediate-Advanced)", img: "/img/blender.png" },
-    { name: "Unreal Engine (Intermediate)", img: "/img/unreal.png" },
-    { name: "C# (Intermediate)", img: "/img/csharp.png" },
-    { name: "HTML5/CSS (Intermediate)", img: "/img/html5.png" },
-    { name: "GitHub (Intermediate)", img: "/img/github.png" },
-    { name: "Maya (Intermediate)", img: "/img/maya.png" },
-    { name: "Figma (Intermediate)", img: "/img/figma.png" },
-    { name: "-------", img: "/img/unity.png" }
+    { name: "Unity (Intermediate-Advanced)", img: "/my-MyFolioWebpage/img/unity.png" },
+    { name: "Blender (Intermediate-Advanced)", img: "/my-MyFolioWebpage/img/blender.png" },
+    { name: "Unreal Engine (Intermediate)", img: "/my-MyFolioWebpage/img/unreal.png" },
+    { name: "C# (Intermediate)", img: "/my-MyFolioWebpage/img/csharp.png" },
+    { name: "HTML5/CSS (Intermediate)", img: "/my-MyFolioWebpage/img/html5.png" },
+    { name: "GitHub (Intermediate)", img: "/my-MyFolioWebpage/img/github.png" },
+    { name: "Maya (Intermediate)", img: "/my-MyFolioWebpage/img/maya.png" },
+    { name: "Figma (Intermediate)", img: "/my-MyFolioWebpage/img/figma.png" }
   ],
   professional: [
-    { name: "Project Management", img: "/img/dot.png" },
-    { name: "Game Design", img: "/img/dot.png" },
-    { name: "Problem Solving", img: "/img/dot.png" },
-    { name: "Team Collaboration", img: "/img/dot.png" },
-    { name: "Debugging", img: "/img/dot.png" },
-    { name: "Fast Learner", img: "/img/dot.png" },
+    { name: "Project Management", img: "/my-MyFolioWebpage/img/dot.png" },
+    { name: "Game Design", img: "/my-MyFolioWebpage/img/dot.png" },
+    { name: "Problem Solving", img: "/my-MyFolioWebpage/img/dot.png" },
+    { name: "Team Collaboration", img: "/my-MyFolioWebpage/img/dot.png" },
+    { name: "Debugging", img: "/my-MyFolioWebpage/img/dot.png" },
+    { name: "Fast Learner", img: "/my-MyFolioWebpage/img/dot.png" },
   ],
   additional: [
-    { name: "Video Editing", img: "/img/dot.png" },
-    { name: "Photography", img: "/img/dot.png" },
-    { name: "Stock Trading", img: "/img/dot.png" },
+    { name: "Video Editing", img: "/my-MyFolioWebpage/img/dot.png" },
+    { name: "Photography", img: "/my-MyFolioWebpage/img/dot.png" },
+    { name: "Stock Trading", img: "/my-MyFolioWebpage/img/dot.png" },
   ]
 };
 
