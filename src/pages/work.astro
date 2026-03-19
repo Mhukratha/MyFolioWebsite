@@ -1,0 +1,173 @@
+---
+import Layout from "../layouts/Layout.astro"
+const projects = [
+  {
+    title: "I Must Survive",
+    subtitle: "3D Third-Person Zombie Stealth",
+    image: "/my-MyFolioWebpage/img/IMS.png",
+    story: "In a world where human civilization has collapsed due to a zombie outbreak, a 19-year-old girl who grew up in a small shelter headed by her uncle. One day, her shelter was robbed and killed by people from other groups to steal supplies. She was the only survivor and found clues of a government shelter behind the walls, a shelter where survivors still lived as before the zombie outbreak.",
+    tasks: [
+      "Planned the entire development roadmap, focusing on core gameplay and story progression first.",
+      "Organized and tracked every task—from coding the character system to creating cutscenes—to meet deadlines.",
+      "Create the game system that is related to the player, the character code, the basic system, and the object interaction system.",
+      "Make animations, cutscenes, and various objects to create scenes in the game."
+    ]
+  },
+  {
+    title: "Aenalia",
+    subtitle: "The Foundation Desktop Application For EN-Card (NFT)",
+    image: "/my-MyFolioWebpage/img/Anelia.png",
+    story: "Aenalia is the limitless and infinite universe formed by a network of unique interconnected virtual worlds known as the Metaverse Spaces. This universe contributes by Creators/Artists through Unreal Engine, a tool that loves by creators around the world.",
+    tasks: [
+      "Make a map of this project with the environment inside, including animation within the work.",
+      "Create 3D model works for the work of an artist and arrange the composition in the scene for beauty and realism.",
+    ]
+  },
+  {
+    title: "Verse of Cursed",
+    subtitle: "BU GAME ON! final pitching round",
+    image: "/my-MyFolioWebpage/img/Verse.png", 
+    story: "In this game, players can transform into various toys to explore a vast and exciting world of living toys. Players can use the unique abilities of each toy to overcome various obstacles on their adventure.",
+    tasks: [
+      "Create 3D model assets for the scence.",
+      "Design and create 3D Model character in game.",
+    ]
+  }
+];
+---
+
+<Layout>
+  <section class="work-section">
+    <div class="container">
+      <h2 class="bg-title">My<span>Work</span></h2>
+      
+      <div class="projects-container">
+        {projects.map((project) => (
+          <div class="project-card">
+            <div class="project-header">
+              <img src={project.image} alt={project.title} />
+              <div class="project-title-bar">
+                <h3>{project.title}</h3>
+                <p>{project.subtitle}</p>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <p class="project-story">{project.story}</p>
+              
+              <div class="responsibilities">
+                <strong>My Responsibilities</strong>
+                <ul>
+                  {project.tasks.map((task) => (
+                    <li>{task}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .work-section {
+    padding: 100px 5%;
+    min-height: 100vh;
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 50px;
+  }
+
+  .project-card {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .project-header {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: #000;
+  }
+
+  .project-header img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .project-title-bar {
+    background: #2b1616; 
+    padding: 15px 25px;
+  }
+
+  .project-title-bar h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-family: 'Inter', sans-serif;
+  }
+
+  .project-title-bar p {
+    margin: 5px 0 0;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+  }
+
+  .project-body {
+    padding: 30px 10px;
+  }
+
+  .project-story {
+    line-height: 1.8;
+    color: #cccccc;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    text-align: justify;
+  }
+
+  .responsibilities strong {
+    display: block;
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif; 
+  }
+
+  .responsibilities ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .responsibilities li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    color: #bbbbbb;
+    line-height: 1.5;
+  }
+
+  .responsibilities li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: white;
+    font-weight: bold;
+  }
+
+  /* Responsive สำหรับจอเล็ก */
+  @media (max-width: 768px) {
+    .project-header { border-radius: 15px; }
+    .project-title-bar { padding: 12px 20px; }
+    .project-title-bar h3 { font-size: 1.2rem; }
+    .project-body { padding: 20px 5px; }
+    .project-story { font-size: 0.95rem; }
+  }
+</style>

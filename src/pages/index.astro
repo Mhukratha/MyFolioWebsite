@@ -1,11 +1,63 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro"
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Home">
+  <main>
+    <section id="home" class="hero-section">
+				<div class="content-wrapper">
+					<h1 class="title">Developer <span class="dim">Portfolio</span></h1>
+					<p class="subtitle">welcome to <span class="purple">my page</span></p>
+					<div class="description">
+						<p>
+							Motivated Junior Software Developer with hands-on experience in <span class="highlight">C# 
+							and Unity</span>, strong in programming logic, debugging, and system implementation. 
+							Eager to learn, adaptable, and seeking an entry-level position to contribute to 
+							software development projects in a team-based environment.
+						</p>
+					</div>
+				</div>
+    </section>
+  </main>
 </Layout>
+
+
+<style is:global>
+.content-wrapper{
+  width: 100%;
+  max-width: 1200px; 
+  margin: 0 auto;
+  padding: 0 5%;     
+  box-sizing: border-box;
+}
+
+  /* --------------------------- Home ----------------------------------*/
+  .hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+	
+  .title {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    line-height: 1.1;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+  }
+  .title .dim {
+    color: #d12297;
+    font-weight: 300;
+    
+  }
+  .subtitle { color: #b084ff;
+    font-size: 1.2rem;
+    margin-top: 1em;
+    font-family:'Times New Roman', Times, serif
+  }
+  .description{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+	</style>
