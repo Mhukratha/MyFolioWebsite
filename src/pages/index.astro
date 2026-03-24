@@ -1,63 +1,33 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Home">
-  <main>
-    <section id="home" class="hero-section">
-				<div class="content-wrapper">
-					<h1 class="title">Developer <span class="dim">Portfolio</span></h1>
-					<p class="subtitle">welcome to <span class="purple">my page</span></p>
-					<div class="description">
-						<p>
-							Motivated Junior Software Developer with hands-on experience in <span class="highlight">C# 
-							and Unity</span>, strong in programming logic, debugging, and system implementation. 
-							Eager to learn, adaptable, and seeking an entry-level position to contribute to 
-							software development projects in a team-based environment.
-						</p>
-					</div>
-				</div>
-    </section>
+<Layout title="Home | Yossawin">
+  <main class="flex min-h-screen items-center justify-center relative overflow-hidden">
+
+    <div class="container mx-auto px-6 md:px-20">
+      <div class="max-w-5xl">
+        
+        <h1 class="m-0 text-[clamp(0.5rem,6vw,5rem)] font-black uppercase leading-[0.8] tracking-tighter text-white">
+          Developer <span class="text-[#d12297]">Portfolio</span>
+        </h1>
+
+        <p class="mt-4 text-[clamp(1.2rem,3vw,1.8rem)] font-serif italic text-[#b084ff] opacity-90">
+          welcome to my page
+        </p>
+
+        <div class="mt-8 max-w-3xl">
+          <p class="text-[clamp(0.8rem,2vw,1.25rem)] leading-relaxed text-gray-300 font-light">
+            Motivated Junior Software Developer with hands-on experience in 
+            <span class="font-bold text-white">C# and Unity</span>, strong in programming logic, 
+            debugging, and system implementation. Eager to learn, adaptable, and seeking 
+            an entry-level position to contribute to software development projects 
+            in a team-based environment.
+          </p>
+        </div>
+
+      </div>
+    </div>
   </main>
 </Layout>
 
-
-<style is:global>
-.content-wrapper{
-  width: 100%;
-  max-width: 1200px; 
-  margin: 0 auto;
-  padding: 0 5%;     
-  box-sizing: border-box;
-}
-
-  /* --------------------------- Home ----------------------------------*/
-  .hero-section {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-  }
-	
-  .title {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    line-height: 1.1;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    margin: 0;
-  }
-  .title .dim {
-    color: #d12297;
-    font-weight: 300;
-    
-  }
-  .subtitle { color: #b084ff;
-    font-size: 1.2rem;
-    margin-top: 1em;
-    font-family:'Times New Roman', Times, serif
-  }
-  .description{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-	</style>

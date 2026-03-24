@@ -1,340 +1,201 @@
 ---
-import Layout from "../layouts/Layout.astro"
-
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="About Me">
-  <main>
-    <section id="about" class="about-section">
-				<div class="container">
-				<h2 class="bg-title">About<span> Me</span></h2>
-					<div class="about-grid">
-						<div class="about-info">
-							<h3>I'm Yossawin Kasiphongphaisan</h3>
-						</div>
-						<div class="about-image">
-							<img src="/MyFolioWebpage/img/Yossawin.png" alt="Yossawin">
-						</div>
-					</div>
-          <div class="about-info">
-							<p>I'm a Junior Software Developer with a strong interest in writing clear, maintainable code and building systems that work reliably in real use cases. 
-							I enjoy working with structured logic, understanding how systems behave, and improving performance through careful debugging and iteration. 
-							</p>
-              <p> My experience comes from project-based development using C# and Unity, where I’ve implemented core systems, handled problem-solving tasks, and collaborated closely with team members. I’m comfortable learning new tools, adapting to different requirements, and continuously improving my technical skills.
-							</p>
-              <p> I’m currently seeking an entry-level position where I can grow as a developer, contribute to a development team, and work on meaningful software projects.
-							</p>
-						</div>
-          <!-------------------- Skill Tab ----------------------->
-					<div class="skills-tabs">
-            <div class="tab-item active" data-category="technical">
-              <strong>Technical Skills</strong>
-            </div>
-            <div class="tab-item inactive" data-category="professional">
-              <strong>Professional Strengths</strong>
-            </div>
-            <div class="tab-item inactive" data-category="additional">
-              <strong>Additional Skills</strong>
-            </div>
-            </div>
-            <!-------------------- Skill grid ----------------------->
-						<div class="skills-content">
-							<div class="skills-grid" id="skills-grid-container">
-							</div>
-						</div>
-            <!-------------------- info  ----------------------->
-            <div class="skill-detail-box">
-              <p id="skill-detail-text">Experience</p>
-            </div>
-					</div>
-				</div>
-			</section>
+  <main class="relative pt-32 pb-20">
+    <section id="about" class="container mx-auto px-6 md:px-20">
+      <h2 class="text-center text-[clamp(3rem,8vw,5rem)] font-black uppercase tracking-tighter text-[#3b3b3b] mb-12">
+        About<span class="text-[#d4af37]"> Me</span>
+      </h2>
+
+      <div class="grid gap-12 items-center max-w-6xl mx-auto mb-20">
+        <div class="order-2 space-y-6">
+          <h3 class="text-3xl md:text-6xl text-center font-serif italic text-white">I'm Yossawin Kasiphongphaisan</h3>
+          <div class="space-y-2 text-[#fdcdff] text-[clamp(0.8rem,2vw,1.5rem)] leading-relaxed font-light">
+            <p>I'm a Junior Software Developer with a strong interest in writing clear, maintainable code and building systems that work reliably in real use cases.</p>
+            <p>My experience comes from project-based development using C# and Unity, where I’ve implemented core systems and collaborated closely with team members.</p>
+          </div>
+        </div>
+
+        <div class="order-1 flex justify-center">
+          <div class="relative group">
+            <div class="absolute inset-0 bg-white blur-3xl opacity-20 group-hover:opacity-40 transition-opacity "></div>
+            <img src="/MyFolioWebpage/img/Yossawin.png" alt="Yossawin" class="relative w-full mx-auto drop-shadow-2xl transition-all duration-500
+                      max-w-[220px] 
+                      sm:max-w-[300px] 
+                      md:max-w-[350px] 
+                      lg:max-w-[450px] 
+                      xl:max-w-[500px]"/>
+          </div>
+        </div>
+      </div>
+
+      <div class=".container mx-auto mb-4">
+        <div class="flex flex-col lg:flex-row justify-center gap-2 md:gap-2 lg:gap-4 items-center" id="tab-container">
+          <button class="tab-btn active" data-category="technical">Technical Skills</button>
+          <button class="tab-btn inactive" data-category="professional">Professional</button>
+          <button class="tab-btn inactive" data-category="additional">Additional</button>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-4xl p-6 md:p-10 shadow-2xl min-h-120 md:min-h-150 flex flex-col transition-all duration-300">
+        <div class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-3 lg:gap-4 xl:gap-10" id="skills-grid-container"></div>
+
+        <div class="mt-auto pt-8 border-t border-gray-100">
+          <div class="bg-[#f8f8f8] p-4 rounded-2xl border border-gray-100 min-h-10 md:min-h-20 flex items-center">
+            <p id="skill-detail-text" class="text-gray-400 italic text-sm md:text-lg">ชี้ที่ไอคอนเพื่อดูรายละเอียด...</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
 
-<style is:global>
-  .about-section {
-    min-height: 100vh;
-    padding: 100px 10%;
-  }
-	.about-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    align-items: center;
-    gap: 50px;
-    margin: 5% 0;
-    justify-content: center;
+<style>
+  @reference "tailwindcss";
 
-    max-width: 1000px;       
-    margin: 5% auto;        
-    gap: 50px;              
-    width: 100%;
-  }
-  .about-info {
-    flex: 2;
-    text-align: left;
-    margin: 10% auto;
-  }
-	.about-info h3 {
-    font-size: clamp(2rem, 5vw, 3rem);
-    font-family: cursive;
-    margin: 0;
-  }
-  .about-info p {
-    font-size: clamp(0.5rem, 5vw, 1.2rem);
-    font-family: cursive; color: #fdcdff;
-    line-height: 1.5;
-    margin: 10 auto;
-  }
-  .about-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.1));}
-  }
-  /* ---------------------------tab--------------------------------- */
-  .skills-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    max-width: 1000px;
-    margin: 10px auto;
-    width: 100%;
-    transition: all 0.5s ease; 
-    min-height: 70px;
-  }
-  .tab-item {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #000000;
-    border-radius: 15px;
-    cursor: pointer;
-    flex: 1;
-    padding: 15px 10px;
-    transition: all 0.5s ease;
-    opacity: 0.6;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
-  }
-  .tab-item strong {
-    color: #fff;
-    margin: 0;
-    line-height: 1.2;
-    font-size: clamp(0.5rem, 1.5vw, 1rem);
-    text-transform: uppercase;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  .tab-item.active {
-    background: #f5f5f5; 
-    opacity: 1;
-    flex: 2; 
-    transform: translateY(-5px);
-  }
-  .tab-item.active strong {
-    color: #000;
-  }
-  /* ---------------------------tab--------------------------------- */
-  /* ---------------------------content--------------------------------- */
-  .skills-content {
-    min-height: 450px;
-    display: flex;
-    flex-direction: column;
-    background: white;
-    border-radius: 15px;
-    padding: clamp(15px, 3vw, 30px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    max-width: 1000px;
-    margin: 0 auto 10% auto;
-  }
-  .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 20px;
-    
-  }
-  .skill-card {
-    background: #ececec;
-    height: 110px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #000000;
-    font-size: 0.8rem;
-    font-weight: bold;
-    text-align: center;
-    padding: 10px;
-    animation: fadeIn 0.3s ease-in-out;
-    i{
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-  }
-  }
-  .skill-info {
-  font-size: 0.75rem;
-  color: #666;
-  margin-top: 0;
-  max-height: 0;
-  opacity: 0;
-  transition: all 0.3s ease;
-  font-family: 'Inter', sans-serif;
-  }
-  .skill-card:hover {
-    background-color: #ffffff;
-    transform: translateY(-5px);
-  }
-  .skill-card:hover .skill-info {
-    max-height: 60px;
-    opacity: 1;
-    margin-top: 10px;
-  }
-  .skill-name {
-    transition: color 0.3s;
-  }
-  .skill-card:hover .skill-name {
-    color: #d12297; 
-  }
-  
-  @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
-  }
-	.skill-card:hover{
-		background-color: #ffffff;
-    i{
-    transform: scale(1.1);
-    opacity: 1;
-    }
-    img{
-      opacity: 1;
-    }
-	}
-  .skill-card img {
-    width: 40px;
-    margin-bottom: 10px;
-    opacity: 0.7;
-  }
-
-  .skill-detail-box{
-    font-size: clamp(0.5rem, 5vw, 1.2rem);
-    font-family: cursive; 
-    color: #ffffff;
-    line-height: 1.5;
-    margin: 10 auto;
-  }
-
-@media (max-width: 768px) {
-  .skills-tabs {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-  }
   .tab-btn {
-    width: 100%;
-    font-size: 0.8rem;
-    padding: 10px;
+    @apply rounded-2xl border border-white/10 transition-all duration-500;
+    @apply text-center font-black tracking-widest whitespace-nowrap uppercase;
+
+    @apply w-full px-2 py-3 text-[10px];
+
+    @apply md:px-10 md:py-4 md:text-sm;
+
+    @apply lg:min-w-[250px] lg:py-3 lg:text-base;
+
+    @apply xl:py-4 xl:text-base;
   }
-  .bg-title  {
-    font-size: 3em;
+
+  .tab-btn.active {
+    @apply scale-105 bg-white text-black shadow-[0_10px_30px_rgba(255,255,255,0.2)];
   }
-  .about-grid { 
-    text-align: center;
-  }
-  .about-info{
-    font-size: 70%;
-  }
-  .about-image img{
-    width: 70%;
-  }
-  .tab-btn.active { 
-    transform: translateY(0px);
-  }
+
+  .tab-btn.inactive {
+    @apply bg-black/40 text-gray-400 hover:border-white/30 hover:bg-black/60 hover:text-white;
   }
 </style>
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
-    renderSkills('technical');
-});
   const skillsData = {
-  technical: [
-    { name: "Unity", icon: "devicon-unity-plain colored", info: "(Intermediate-Advanced)",detail: "ประสบการณ์ 4 ปีในการพัฒนาเกม 3D ทั้งระบบฟิสิกส์ และการทำ Optimization" },
-    { name: "Blender", icon: "devicon-blender-original colored", info: "(Intermediate-Advanced)"},
-    { name: "Unreal Engine ", icon: "devicon-unrealengine-original", info: "(Intermediate)" },
-    { name: "C# ", icon: "devicon-csharp-line-wordmark colored" , info: "(Intermediate)"},
-    { name: "HTML5/CSS ", icon: "devicon-html5-plain-wordmark colored", info: "(Intermediate)" },
-    { name: "GitHub ", icon: "devicon-github-original", info: "(Intermediate)" },
-    { name: "GitLab ", icon: "devicon-gitlab-plain colored" , info: "(Intermediate)"}, 
-    { name: "Maya ", icon: "devicon-maya-plain colored" , info: "(Intermediate)"},
-    { name: "Figma ", icon: "devicon-figma-plain colored" , info: "(Intermediate)"}
-  ],
-  professional: [
-    { name: "Project Management", icon: "devicon-trello-plain colored" ,detail: "เคยผ่านการทำงานเป็นทีมด้วยระบบ Scrum และใช้ Trello ในการคุมงาน"},
-    { name: "Game Design", icon: "devicon-figma-plain colored" },
-    { name: "Problem Solving", icon: "devicon-atom-plain" }, 
-    { name: "Team Collaboration", icon: "devicon-github-original" },
-    { name: "Debugging", icon: "devicon-vscode-plain colored" },
-    { name: "Fast Learner", icon: "devicon-google-plain colored" },
-  ],
-  additional: [
-    { name: "Video Editing", icon: "devicon-premierepro-plain colored" ,detail: "ตัดต่อ Content ลง YouTube ช่องตัวเอง (Horror/Mystery) มีทักษะการเล่าเรื่องผ่านภาพ"},
-    { name: "Photography", icon: "devicon-photoshop-plain colored" },
-    { name: "Stock Trading", icon: "devicon-linux-plain" },
-  ]
-};
+    technical: [
+      { name: "Unity", icon: "devicon-unity-plain colored", info: "Intermediate-Advanced", detail: "4 years in 3D game development, Physics systems, and Mobile Optimization." },
+      { name: "Blender", icon: "devicon-blender-original colored", info: "(Intermediate-Advanced)" },
+      { name: "Unreal Engine ", icon: "devicon-unrealengine-original", info: "(Intermediate)" },
+      { name: "C# ", icon: "devicon-csharp-line-wordmark colored", info: "(Intermediate)" },
+      { name: "HTML5/CSS ", icon: "devicon-html5-plain-wordmark colored", info: "(Intermediate)" },
+      { name: "GitHub ", icon: "devicon-github-original", info: "(Intermediate)" },
+      { name: "GitLab ", icon: "devicon-gitlab-plain colored", info: "(Intermediate)" },
+      { name: "Maya ", icon: "devicon-maya-plain colored", info: "(Intermediate)" },
+      { name: "Figma ", icon: "devicon-figma-plain colored", info: "(Intermediate)" },
+    ],
+    professional: [
+      { name: "Scrum", icon: "devicon-trello-plain colored", detail: "Experienced in Agile workflows and Trello for task management." },
+      { name: "Debugging", icon: "devicon-vscode-plain colored", detail: "Deep investigation of logical bugs and performance bottlenecks." },
+      { name: "Learning", icon: "devicon-google-plain colored", detail: "Always exploring new tech and adapting to project requirements." },
+    ],
+    additional: [
+      { name: "Editing", icon: "devicon-premierepro-plain colored", detail: "Content creation for YouTube (Horror/Mystery) using Premiere Pro." },
+      { name: "Investing", icon: "devicon-linux-plain", detail: "Technical analysis for gold and stock trading." },
+    ],
+  };
 
-const skillTabs = document.querySelectorAll('.tab-item'); 
-const gridContainer = document.getElementById('skills-grid-container');
-const detailText = document.getElementById('skill-detail-text');
-const defaultMessage = "ประสบการณ์...";
+  const gridContainer = document.getElementById("skills-grid-container");
+  const detailText = document.getElementById("skill-detail-text");
 
-function renderSkills(category) {
+  function renderSkills(category) {
     const skills = skillsData[category] || [];
-    gridContainer.innerHTML = skills.map((skill, index) => {
-      let iconContent = skill.icon 
-        ? `<i class="${skill.icon}"></i>` 
-        : `<img src="${skill.img}" alt="${skill.name}">`;
+    gridContainer.innerHTML = skills
+      .map(
+        (skill, index) => `
+      <div class="group bg-[#f0f0f0] hover:bg-white rounded-2xl 
+                  min-h-[100px] sm:min-h-[180px] md:min-h-[120px] lg:min-h-[180px]
+                  flex flex-col items-center text-center 
+                  transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl 
+                  cursor-help border border-transparent hover:border-[#d12297]/20 animate-fadeIn"
+           style="animation-delay: ${index * 30}ms"data-index="${index}" data-category="${category}">
+        
+        <i class="${skill.icon} text-3xl my-4 sm:text-5xl md:text-3xl lg:text-5xl xl:text-6xl md:my-6 lg:my-8 
+                  transition-transform duration-500 group-hover:scale-110"></i>
+        
+        <span class="text-black font-black text-[8px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-tighter leading-none">
+          ${skill.name}
+        </span>
+        
+        <span class="hidden md:block text-sm lg:text-base text-gray-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          ${skill.info || ""}
+        </span>
+      </div>
+    `,
+      )
+      .join("");
 
-      return `
-        <div class="skill-card" data-index="${index}" data-category="${category}">
-          ${iconContent}
-          <span class="skill-name">${skill.name}</span>
-          <p class="skill-info">${skill.info || ''}</p>
-        </div>
-      `;
-    }).join('');
-
-    const cards = gridContainer.querySelectorAll('.skill-card');
-    cards.forEach(card => {
-      card.addEventListener('mouseenter', () => {
-        const cat = card.getAttribute('data-category');
-        const idx = card.getAttribute('data-index');
-        detailText.innerText = skillsData[cat][idx].detail || "ไม่มีข้อมูลเพิ่มเติม";
+    // Add Hover Interaction
+    // Add Interaction (Hover & Click)
+    gridContainer.querySelectorAll("[data-index]").forEach((card) => {
+      // ฟังก์ชันช่วยอัปเดตข้อมูล
+      const updateDetail = (category, index, isFixed = false) => {
+        detailText.innerText = skillsData[category][index].detail || "ไม่มีข้อมูลเพิ่มเติม";
+        detailText.classList.remove("text-gray-400");
+        detailText.classList.add("text-black");
         detailText.style.opacity = "1";
+      };
+
+      // 1. ฟังก์ชัน Click (สำหรับมือถือและคนชอบกด)
+      card.addEventListener("click", (e) => {
+        const { category, index } = card.dataset;
+
+        // ลบขอบสีชมพูจากการ์ดใบอื่นก่อน
+        gridContainer.querySelectorAll("[data-index]").forEach((c) => {
+          c.classList.remove("border-[#d12297]", "bg-white", "shadow-2xl");
+          c.classList.add("border-transparent", "bg-[#f0f0f0]");
+        });
+
+        // เพิ่มขอบสีชมพูให้ใบที่โดนกด
+        card.classList.add("border-[#d12297]", "bg-white", "shadow-2xl");
+        card.classList.remove("border-transparent", "bg-[#f0f0f0]");
+
+        updateDetail(category, index, true);
+
+        // ป้องกันไม่ให้ mouseleave มาลบข้อความทันทีหลังจากคลิก
+        card.setAttribute("data-selected", "true");
       });
 
-      card.addEventListener('mouseleave', () => {
-        detailText.innerText = defaultMessage;
-        detailText.style.opacity = "0.7";
+      // 2. ฟังก์ชัน Mouse Enter
+      card.addEventListener("mouseenter", () => {
+        const { category, index } = card.dataset;
+        updateDetail(category, index);
+      });
+
+      // 3. ฟังก์ชัน Mouse Leave
+      card.addEventListener("mouseleave", () => {
+        // ถ้าการ์ดนี้ไม่ได้ถูก Click (Selected) ไว้ ให้กลับไปใช้ข้อความเดิม
+        if (card.getAttribute("data-selected") !== "true") {
+          detailText.innerText = "ชี้หรือกดที่ไอคอนเพื่อดูรายละเอียด...";
+          detailText.classList.remove("text-black");
+          detailText.classList.add("text-gray-400");
+          detailText.style.opacity = "0.7";
+        }
       });
     });
-}
+  }
+  // Tab Switching Logic
+  document.querySelectorAll(".tab-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const category = btn.getAttribute("data-category");
+      if (!category) return;
 
-renderSkills('technical');
-
-skillTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      skillTabs.forEach(t => { t.classList.remove('active'); t.classList.add('inactive'); });
-      tab.classList.add('active');
-      tab.classList.remove('inactive');
-      renderSkills(tab.getAttribute('data-category'));
+      document.querySelectorAll(".tab-btn").forEach((b) => {
+        b.classList.remove("active");
+        b.classList.add("inactive");
+      });
+      btn.classList.add("active");
+      btn.classList.remove("inactive");
+      renderSkills(category);
     });
   });
+
+  // Start with Technical
+  renderSkills("technical");
 </script>

@@ -36,30 +36,57 @@ const projects = [
 ];
 ---
 
-<Layout>
-  <section class="work-section">
-    <div class="container">
-      <h2 class="bg-title">My<span>Work</span></h2>
+<Layout title="My Work">
+  <main class="relative pt-32 pb-20">
+    <section class="container mx-auto px-6">
       
-      <div class="projects-container">
+      <h2 class="text-center text-[clamp(3rem,8vw,5rem)] font-black uppercase tracking-tighter text-[#3b3b3b] mb-16">
+        My<span class="text-[#d4af37]"> Work</span>
+      </h2>
+
+      <div class="flex flex-col items-center gap-24 md:gap-32 mt-12">
         {projects.map((project) => (
-          <div class="project-card">
-            <div class="project-header">
-              <img src={project.image} alt={project.title} />
-              <div class="project-title-bar">
-                <h3>{project.title}</h3>
-                <p>{project.subtitle}</p>
+          <div class="max-w-6xl p2:auto w-full group animate-fadeIn">
+            
+            <div class="rounded-3xl overflow-hidden shadow-2xl transition-transform duration-500 group-hover:-translate-y-2 border border-white/5 bg-black">
+              
+              <div class="relative aspect-video overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+              </div>
+
+              <div class="bg-[#1a1a1a] p-5 md:p-8 border-t border-white/5">
+                <h3 class="nav-text text-2xl md:text-4xl font-black uppercase tracking-tight m-0">
+                  {project.title}
+                </h3>
+                <p class="text-[#b084ff] text-xs md:text-base mt-4 font-serif italic opacity-80 uppercase tracking-widest ">
+                  {project.subtitle}
+                </p>
               </div>
             </div>
 
-            <div class="project-body">
-              <p class="project-story">{project.story}</p>
+            <div class="px-2 md:px-8 py-8 md:py-12 grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12">
               
-              <div class="responsibilities">
-                <strong>My Responsibilities</strong>
-                <ul>
+              <div class="md:col-span-5">
+                <p class="text-gray-300 leading-relaxed text-base md:text-xl text-justify font-light opacity-90">
+                  {project.story}
+                </p>
+              </div>
+
+              <div class="md:col-span-5">
+                <strong class="block text-white text-xl md:text-3xl font-serif italic mb-6 border-b border-white/10 pb-2">
+                  My Responsibilities
+                </strong>
+                <ul class="space-y-4 p-0 m-0 list-none">
                   {project.tasks.map((task) => (
-                    <li>{task}</li>
+                    <li class="relative pl-6 text-gray-400 text-sm md:text-xl leading-snug group-hover:text-gray-200 transition-colors">
+                      <span class="absolute left-0 text-[#d12297] font-bold">•</span>
+                      {task}
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -67,107 +94,24 @@ const projects = [
           </div>
         ))}
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 </Layout>
 
-<style>
-  .work-section {
-    padding: 100px 5%;
-    min-height: 100vh;
+<style is:global>
+  .nav-text {
+    background: linear-gradient(to bottom, #FFF491 0%, #FF99CC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
   }
 
-  .projects-container {
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    margin-top: 50px;
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
-
-  .project-card {
-    max-width: 900px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .project-header {
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    background: #000;
-  }
-
-  .project-header img {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-
-  .project-title-bar {
-    background: #2b1616; 
-    padding: 15px 25px;
-  }
-
-  .project-title-bar h3 {
-    margin: 0;
-    color: #ffffff;
-    font-size: 1.5rem;
-    font-family: 'Inter', sans-serif;
-  }
-
-  .project-title-bar p {
-    margin: 5px 0 0;
-    color: #aaaaaa;
-    font-size: 0.9rem;
-  }
-
-  .project-body {
-    padding: 30px 10px;
-  }
-
-  .project-story {
-    line-height: 1.8;
-    color: #cccccc;
-    font-size: 1rem;
-    margin-bottom: 30px;
-    text-align: justify;
-  }
-
-  .responsibilities strong {
-    display: block;
-    font-size: 1.3rem;
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-family: 'Times New Roman', Times, serif; 
-  }
-
-  .responsibilities ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  .responsibilities li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 12px;
-    color: #bbbbbb;
-    line-height: 1.5;
-  }
-
-  .responsibilities li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: white;
-    font-weight: bold;
-  }
-
-  /* Responsive สำหรับจอเล็ก */
-  @media (max-width: 768px) {
-    .project-header { border-radius: 15px; }
-    .project-title-bar { padding: 12px 20px; }
-    .project-title-bar h3 { font-size: 1.2rem; }
-    .project-body { padding: 20px 5px; }
-    .project-story { font-size: 0.95rem; }
+  .animate-fadeIn {
+    animation: fadeIn 0.8s ease-out forwards;
   }
 </style>
