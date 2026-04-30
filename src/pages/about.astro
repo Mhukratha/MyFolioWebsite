@@ -5,14 +5,14 @@ import Layout from "../layouts/Layout.astro";
 <Layout title="About Me">
   <main class="relative pt-32 pb-20">
     <section id="about" class="container mx-auto px-10 md:px-20">
-      <h2 class="text-center text-[clamp(3rem,8vw,5rem)] font-black uppercase tracking-tighter text-[#3b3b3b] mb-12">
+      <h2 class="text-center text-[clamp(1.5rem,8vw,2.5rem)] font-black uppercase tracking-tighter text-[#3b3b3b] mb-12">
         About<span class="text-[#d4af37]"> Me</span>
       </h2>
 
       <div class="grid lg:grid-flow-col gap-12 items-center max-w-6xl mx-auto mb-25">
         <div class="order-2 space-y-6">
           <h3 class="text-2xl md:text-3xl lg:text-4xl text-center font-serif italic text-white my-10">I'm Yossawin Kasiphongphaisan</h3>
-          <div class="space-y-4 text-[#fdcdff] text-[clamp(0.8rem,1.5vw,1.5rem)] leading-relaxed font-light">
+          <div class="space-y-4 text-[#fdcdff] text-[clamp(0.7rem,1.5vw,1rem)] leading-relaxed font-light">
             <p>I'm a Junior Software Developer with a strong interest in writing clear, maintainable code and building systems that work reliably in real use cases.</p>
             <p>My experience comes from project-based development using C# and Unity, where I’ve implemented core systems and collaborated closely with team members.</p>
           </div>
@@ -22,25 +22,25 @@ import Layout from "../layouts/Layout.astro";
           <div class="relative group">
             <div class="absolute inset-0 bg-white blur-3xl opacity-20 group-hover:opacity-40 transition-opacity "></div>
             <img src="/MyFolioWebpage/img/Yossawin.png" alt="Yossawin" class="relative w-full mx-auto drop-shadow-2xl transition-all duration-500
-                      max-w-[220px] 
-                      sm:max-w-[300px] 
-                      md:max-w-[350px]
-                      lg:max-w-[450px] 
-                      xl:max-w-[500px]"/>
+                      max-w-[200px] 
+                      sm:max-w-[200px] 
+                      md:max-w-[250px]
+                      lg:max-w-[300px]"/>
           </div>
         </div>
       </div>
 
-      <div class="container mx-auto mb-5 lg:mb-7">
-        <div class="flex flex-col lg:flex-row justify-center gap-4 md:gap-2 lg:gap-7 items-center" id="tab-container">
+      <div class="container mb-5 lg:mb-10 px-5 md:px-10 lg:px-20">
+        <div class="flex flex-col lg:flex-row justify-center gap-2 md:gap-2 lg:gap-7 items-center" id="tab-container">
           <button class="tab-btn active" data-category="technical">Technical Skills</button>
           <button class="tab-btn inactive" data-category="professional">Professional</button>
+          <button class="tab-btn inactive" data-category="languages">Languages</button> {/* <-- เพิ่มปุ่ม Languages */}
           <button class="tab-btn inactive" data-category="additional">Additional</button>
         </div>
       </div>
 
-      <div class="bg-white rounded-4xl p-6 md:p-10 shadow-2xl min-h-120 md:min-h-150 flex flex-col transition-all duration-300">
-        <div class="grid grid-cols-3 md:grid-cols-5 gap-2 md:gap-3 lg:gap-4 xl:gap-10" id="skills-grid-container"></div>
+      <div class="bg-white rounded-4xl mx-5 md:mx-10 lg:mx-20 xl:mx-40 p-6 md:p-10 lg:p-15 shadow-2xl min-h-120 md:min-h-150 flex flex-col transition-all duration-300">
+        <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-3 lg:gap-4 xl:gap-5" id="skills-grid-container"></div> {/* ปรับ grid-cols เพื่อให้รองรับไอคอนที่เพิ่มขึ้น */}
 
         <div class="mt-auto pt-8 border-t border-gray-100">
           <div class="bg-[#f8f8f8] p-4 rounded-2xl border border-gray-100 min-h-10 md:min-h-20 flex items-center">
@@ -59,13 +59,13 @@ import Layout from "../layouts/Layout.astro";
     @apply rounded-2xl border border-white/10 transition-all duration-500;
     @apply text-center font-black tracking-widest whitespace-nowrap uppercase;
 
-    @apply w-full py-3 text-[8px];
+    @apply w-full py-2 text-[8px];
 
-    @apply md:px-10 md:py-4 md:text-sm;
+    @apply md:px-10 md:py-2 md:text-[9px];
 
-    @apply lg:py-3;
+    @apply lg:py-3 ;
 
-    @apply xl:py-4 xl:text-base;
+    @apply xl:py-4 xl:text-[11px];
   }
 
   .tab-btn.active {
@@ -81,23 +81,32 @@ import Layout from "../layouts/Layout.astro";
   const skillsData = {
     technical: [
       { name: "Unity", icon: "devicon-unity-plain colored", info: "Intermediate-Advanced", detail: "4 years in 3D game development, Physics systems, and Mobile Optimization." },
-      { name: "Blender", icon: "devicon-blender-original colored", info: "(Intermediate-Advanced)" },
-      { name: "Unreal Engine ", icon: "devicon-unrealengine-original", info: "(Intermediate)" },
-      { name: "C# ", icon: "devicon-csharp-line-wordmark colored", info: "(Intermediate)" },
-      { name: "HTML5/CSS ", icon: "devicon-html5-plain-wordmark colored", info: "(Intermediate)" },
-      { name: "GitHub ", icon: "devicon-github-original", info: "(Intermediate)" },
-      { name: "GitLab ", icon: "devicon-gitlab-plain colored", info: "(Intermediate)" },
-      { name: "Maya ", icon: "devicon-maya-plain colored", info: "(Intermediate)" },
-      { name: "Figma ", icon: "devicon-figma-plain colored", info: "(Intermediate)" },
+      { name: "C#", icon: "devicon-csharp-line-wordmark colored", info: "Intermediate", detail: "Main language used for Unity scripts, game logic, and core systems." },
+      { name: "JavaScript", icon: "devicon-javascript-plain colored", info: "Basic", detail: "Familiar with basic web interactivity and logic." },
+      { name: "HTML5/CSS", icon: "devicon-html5-plain-wordmark colored", info: "Intermediate", detail: "Creating responsive and structured web layouts." },
+      { name: "Tailwind CSS", icon: "devicon-tailwindcss-original colored", info: "Intermediate", detail: "Utility-first CSS framework for rapid UI development." },
+      { name: "MySQL", icon: "devicon-mysql-plain colored", info: "Basic", detail: "Basic relational database management and querying." },
+      { name: "Blender", icon: "devicon-blender-original colored", info: "Intermediate-Advanced", detail: "3D modeling, texturing, and basic animation for game assets." },
+      { name: "Unreal Engine", icon: "devicon-unrealengine-original text-black", info: "Intermediate", detail: "Level design and asset composition." },
+      { name: "GitHub", icon: "devicon-github-plain text-black", info: "Intermediate", detail: "Version control, collaboration, and code management." },
+      { name: "GitLab", icon: "devicon-gitlab-plain colored", info: "Intermediate", detail: "Repository management and CI/CD basics." },
+      { name: "Maya", icon: "devicon-maya-plain colored", info: "Intermediate", detail: "3D modeling and animation workflow." },
+      { name: "Figma", icon: "devicon-figma-plain colored", info: "Intermediate", detail: "UI/UX wireframing and prototyping." },
     ],
     professional: [
-      { name: "Scrum", icon: "devicon-trello-plain colored", detail: "Experienced in Agile workflows and Trello for task management." },
-      { name: "Debugging", icon: "devicon-vscode-plain colored", detail: "Deep investigation of logical bugs and performance bottlenecks." },
-      { name: "Learning", icon: "devicon-google-plain colored", detail: "Always exploring new tech and adapting to project requirements." },
+      { name: "Scrum", icon: "devicon-trello-plain colored", detail: "Experienced in Agile workflows and using tools like Trello for sprint task management." },
+      { name: "Problem Solving", icon: "devicon-chrome-plain colored", detail: "Strong analytical skills to break down complex bugs into manageable solutions." },
+      { name: "Debugging", icon: "devicon-vscode-plain colored", detail: "Deep investigation of logical errors, crashes, and performance bottlenecks." },
+      { name: "Communication", icon: "devicon-slack-plain colored", detail: "Clear and effective communication within cross-functional teams." },
+      { name: "Learning", icon: "devicon-google-plain colored", detail: "Highly adaptable; always exploring new technologies to meet project requirements." },
+    ],
+    languages: [
+      { name: "Thai", icon: "devicon-markdown-original colored", info: "Native", detail: "Native speaker. Excellent verbal and written communication." },
+      { name: "English", icon: "devicon-chrome-plain colored", info: "Intermediate", detail: "Able to read technical documentation, communicate ideas, and research effectively." }
     ],
     additional: [
-      { name: "Editing", icon: "devicon-premierepro-plain colored", detail: "Content creation for YouTube (Horror/Mystery) using Premiere Pro." },
-      { name: "Investing", icon: "devicon-linux-plain", detail: "Technical analysis for gold and stock trading." },
+      { name: "Editing", icon: "devicon-premierepro-plain colored", detail: "Content creation and video editing for YouTube (Horror/Mystery) using Premiere Pro." },
+      { name: "Investing", icon: "devicon-linux-plain text-black", detail: "Technical analysis and tracking trends for gold and stock trading." },
     ],
   };
 
@@ -108,33 +117,35 @@ import Layout from "../layouts/Layout.astro";
     const skills = skillsData[category] || [];
     gridContainer.innerHTML = skills
       .map(
-        (skill, index) => `
-      <div class="group bg-[#f0f0f0] hover:bg-white rounded-2xl 
-                  min-h-[100px] sm:min-h-[180px] md:min-h-[120px] lg:min-h-[180px]
-                  flex flex-col items-center text-center 
-                  transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl 
-                  cursor-help border border-transparent hover:border-[#d12297]/20 animate-fadeIn"
-           style="animation-delay: ${index * 30}ms"data-index="${index}" data-category="${category}">
-        
-        <i class="${skill.icon} text-3xl my-4 sm:text-5xl md:text-3xl lg:text-5xl xl:text-6xl md:my-6 lg:my-8 
-                  transition-transform duration-500 group-hover:scale-110"></i>
-        
-        <span class="text-black font-black text-[8px] sm:text-xs md:text-xs lg:text-sm uppercase tracking-tighter leading-none">
-          ${skill.name}
-        </span>
-        
-        <span class="hidden md:block text-sm lg:text-base text-gray-400 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          ${skill.info || ""}
-        </span>
-      </div>
-    `,
+        (skill, index) => {
+          const mobileTextSize = skill.name.length > 8 ? "text-[7.5px] sm:text-[9px]" : "text-[9px] sm:text-[10px]";
+
+          return `
+            <div class="group bg-slate-50/50 hover:bg-white rounded-[20px] 
+                        p-4 sm:p-5 md:p-6 lg:p-8
+                        flex flex-col items-center justify-center text-center 
+                        transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] 
+                        cursor-pointer border border-slate-100 hover:border-[#d12297]/30 animate-fadeIn"
+                style="animation-delay: ${index * 30}ms" data-index="${index}" data-category="${category}">
+              
+              <i class="${skill.icon} text-3xl sm:text-4xl md:text-5xl lg:text-6xl mb-3 sm:mb-4
+                        transition-all duration-300 group-hover:scale-110 group-hover:-translate-y-1"></i>
+              
+              <span class="text-slate-700 font-semibold ${mobileTextSize} md:text-xs lg:text-sm uppercase tracking-wider leading-tight">
+                ${skill.name}
+              </span>
+              
+              <span class="hidden md:block text-[10px] lg:text-xs text-slate-400 mt-1 lg:mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0 font-light">
+                ${skill.info || ""}
+              </span>
+            </div>
+          `;
+        }
       )
       .join("");
 
-    // Add Hover Interaction
     // Add Interaction (Hover & Click)
     gridContainer.querySelectorAll("[data-index]").forEach((card) => {
-      // ฟังก์ชันช่วยอัปเดตข้อมูล
       const updateDetail = (category, index, isFixed = false) => {
         detailText.innerText = skillsData[category][index].detail || "ไม่มีข้อมูลเพิ่มเติม";
         detailText.classList.remove("text-gray-400");
@@ -142,23 +153,19 @@ import Layout from "../layouts/Layout.astro";
         detailText.style.opacity = "1";
       };
 
-      // 1. ฟังก์ชัน Click (สำหรับมือถือและคนชอบกด)
+      // 1. ฟังก์ชัน Click
       card.addEventListener("click", (e) => {
         const { category, index } = card.dataset;
 
-        // ลบขอบสีชมพูจากการ์ดใบอื่นก่อน
         gridContainer.querySelectorAll("[data-index]").forEach((c) => {
-          c.classList.remove("border-[#d12297]", "bg-white", "shadow-2xl");
-          c.classList.add("border-transparent", "bg-[#f0f0f0]");
+          c.classList.remove("border-[#d12297]", "bg-white", "shadow-[0_8px_30px_rgb(0,0,0,0.08)]");
+          c.classList.add("border-slate-100", "bg-slate-50/50");
         });
 
-        // เพิ่มขอบสีชมพูให้ใบที่โดนกด
-        card.classList.add("border-[#d12297]", "bg-white", "shadow-2xl");
-        card.classList.remove("border-transparent", "bg-[#f0f0f0]");
+        card.classList.add("border-[#d12297]", "bg-white", "shadow-[0_8px_30px_rgb(0,0,0,0.08)]");
+        card.classList.remove("border-slate-100", "bg-slate-50/50");
 
         updateDetail(category, index, true);
-
-        // ป้องกันไม่ให้ mouseleave มาลบข้อความทันทีหลังจากคลิก
         card.setAttribute("data-selected", "true");
       });
 
@@ -170,7 +177,6 @@ import Layout from "../layouts/Layout.astro";
 
       // 3. ฟังก์ชัน Mouse Leave
       card.addEventListener("mouseleave", () => {
-        // ถ้าการ์ดนี้ไม่ได้ถูก Click (Selected) ไว้ ให้กลับไปใช้ข้อความเดิม
         if (card.getAttribute("data-selected") !== "true") {
           detailText.innerText = "ชี้หรือกดที่ไอคอนเพื่อดูรายละเอียด...";
           detailText.classList.remove("text-black");
@@ -180,6 +186,7 @@ import Layout from "../layouts/Layout.astro";
       });
     });
   }
+
   // Tab Switching Logic
   document.querySelectorAll(".tab-btn").forEach((btn) => {
     btn.addEventListener("click", () => {

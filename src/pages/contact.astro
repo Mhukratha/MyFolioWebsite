@@ -3,73 +3,75 @@ import Layout from "../layouts/Layout.astro"
 ---
 
 <Layout title="Contact ME">
-  <main class="relative pt-32 pb-20 min-h-screen flex items-center justify-center overflow-hidden">
+  <main class="relative pt-24 pb-20 md:pt-32 min-h-screen flex items-center justify-center overflow-hidden">
     
-    <div class="absolute inset-0 bg-gradient-to-b from-[#4a4a4a] via-[#1a1a1a] to-black -z-10"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-[#2a2a2a] via-[#111111] to-black -z-10"></div>
 
-    <section id="contact" class="container mx-auto px-6 max-w-6xl">
+    <section id="contact" class="container mx-auto px-6 max-w-5xl">
       
-      <h2 class="text-white text-[clamp(2.5rem,8vw,5rem)] font-serif mb-12 animate-fadeIn">
-        Contact <span class="italic">ME</span>
+      <h2 class="text-white text-[clamp(2rem,5vw,4rem)] font-light tracking-widest uppercase mb-12 md:mb-16 animate-fadeIn">
+        Contact <span class="font-serif italic text-[#d4af37]">ME</span>
       </h2>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
         
-        <div class="bg-white rounded-[40px] p-8 md:p-12 shadow-2xl animate-fadeInRight">
-          <form class="space-y-6">
+        {/* ฝั่งซ้าย: Form */}
+        <div class="bg-white/95 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.12)] animate-fadeInRight border border-white/10">
+          <form class="space-y-5">
             <div>
-              <label class="block text-black font-bold mb-2 text-sm md:text-base">Name</label>
+              <label class="block text-gray-500 font-medium mb-1.5 text-xs tracking-wider uppercase">Name</label>
               <input 
                 type="text" 
-                placeholder="YourName" 
-                class="w-full bg-[#eeeeee] border-none rounded-2xl px-6 py-4 text-black focus:ring-2 focus:ring-[#d12297]/50 outline-none transition-all"
+                placeholder="Your Name" 
+                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-gray-800 text-sm focus:bg-white focus:ring-1 focus:ring-[#d12297]/50 focus:border-[#d12297]/50 outline-none transition-all placeholder:text-gray-400"
               />
             </div>
 
             <div>
-              <label class="block text-black font-bold mb-2 text-sm md:text-base">Email</label>
+              <label class="block text-gray-500 font-medium mb-1.5 text-xs tracking-wider uppercase">Email</label>
               <input 
                 type="email" 
-                placeholder="YourEmail@Mail.com" 
-                class="w-full bg-[#eeeeee] border-none rounded-2xl px-6 py-4 text-black focus:ring-2 focus:ring-[#d12297]/50 outline-none transition-all"
+                placeholder="you@example.com" 
+                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-gray-800 text-sm focus:bg-white focus:ring-1 focus:ring-[#d12297]/50 focus:border-[#d12297]/50 outline-none transition-all placeholder:text-gray-400"
               />
             </div>
 
             <div>
-              <label class="block text-black font-bold mb-2 text-sm md:text-base">Leave me a message</label>
+              <label class="block text-gray-500 font-medium mb-1.5 text-xs tracking-wider uppercase">Message</label>
               <textarea 
                 rows="4" 
-                placeholder="....." 
-                class="w-full bg-[#eeeeee] border-none rounded-2xl px-6 py-4 text-black focus:ring-2 focus:ring-[#d12297]/50 outline-none transition-all resize-none"
+                placeholder="How can I help you?" 
+                class="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-3.5 text-gray-800 text-sm focus:bg-white focus:ring-1 focus:ring-[#d12297]/50 focus:border-[#d12297]/50 outline-none transition-all resize-none placeholder:text-gray-400"
               ></textarea>
             </div>
 
             <button 
               type="submit" 
-              class="bg-[#333333] hover:bg-black text-white font-bold py-4 px-12 rounded-2xl transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg w-full md:w-auto"
+              class="bg-black hover:bg-neutral-800 text-white font-medium py-3.5 px-8 rounded-xl transition-all duration-300 transform hover:-translate-y-1 shadow-lg shadow-black/20 w-full md:w-auto text-sm tracking-wide mt-2"
             >
-              Submit
+              Send Message
             </button>
           </form>
         </div>
 
-        <div class="text-white space-y-10 animate-fadeInLeft">
+        {/* ฝั่งขวา: Contact Info */}
+        <div class="text-white space-y-10 lg:pl-10 animate-fadeInLeft">
           
           <div>
-            <p class="text-gray-400 text-lg md:text-xl mb-1">Get in touch</p>
-            <h3 class="text-2xl md:text-4xl font-bold break-all hover:text-[#b084ff] transition-colors cursor-pointer" id="copy-email">
+            <p class="text-gray-400/80 text-xs md:text-sm uppercase tracking-widest mb-2 font-light">Get in touch</p>
+            <h3 class="text-xl md:text-2xl lg:text-3xl font-medium tracking-wide break-all hover:text-[#b084ff] transition-colors cursor-pointer" id="copy-email">
               Mhukratha@gmail.com
             </h3>
           </div>
 
           <div>
-            <p class="text-gray-400 text-lg md:text-xl mb-1">Phone</p>
-            <h3 class="text-2xl md:text-4xl font-bold">+66 0830525476</h3>
+            <p class="text-gray-400/80 text-xs md:text-sm uppercase tracking-widest mb-2 font-light">Phone</p>
+            <h3 class="text-xl md:text-2xl lg:text-3xl font-medium tracking-wide">+66 0830525476</h3>
           </div>
 
           <div>
-            <p class="text-gray-400 text-lg md:text-xl mb-1">Address</p>
-            <h3 class="text-2xl md:text-4xl font-bold">Bangkok, Thailand</h3>
+            <p class="text-gray-400/80 text-xs md:text-sm uppercase tracking-widest mb-2 font-light">Address</p>
+            <h3 class="text-xl md:text-2xl lg:text-3xl font-medium tracking-wide text-gray-200">Bangkok, Thailand</h3>
           </div>
 
         </div>
@@ -80,13 +82,12 @@ import Layout from "../layouts/Layout.astro"
 </Layout>
 
 <style>
-  /* Animation เล็กน้อยให้ดูโปร */
   @keyframes fadeInRight {
-    from { opacity: 0; transform: translateX(-30px); }
+    from { opacity: 0; transform: translateX(-20px); }
     to { opacity: 1; transform: translateX(0); }
   }
   @keyframes fadeInLeft {
-    from { opacity: 0; transform: translateX(30px); }
+    from { opacity: 0; transform: translateX(20px); }
     to { opacity: 1; transform: translateX(0); }
   }
   .animate-fadeInRight { animation: fadeInRight 0.8s ease-out forwards; }
@@ -96,12 +97,11 @@ import Layout from "../layouts/Layout.astro"
 </style>
 
 <script is:inline>
-  // ระบบกด Copy Email เท่ๆ
   const emailBtn = document.getElementById('copy-email');
   emailBtn?.addEventListener('click', () => {
     navigator.clipboard.writeText('Mhukratha@gmail.com');
     const originalText = emailBtn.innerText;
-    emailBtn.innerText = 'Copied! ✅';
+    emailBtn.innerText = 'Copied! ✓';
     emailBtn.classList.add('text-green-400');
     setTimeout(() => {
       emailBtn.innerText = originalText;
