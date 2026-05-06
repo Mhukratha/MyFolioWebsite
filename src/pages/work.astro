@@ -39,15 +39,16 @@ const projects = [
   {
     title: "Nattakorn Electric & Construction",
     subtitle: "Corporate Website / Front-End Development",
+    tags: ["Astro", "Tailwind CSS", "HTML", "Cloudflare Pages"],
     image: "/MyFolioWebpage/img/Nattakorn.png",
     link: "https://nattakorn-electric-and-construction.pages.dev/", 
     story: "A corporate website developed for an electrical and construction business. The goal was to create a modern, fast, and responsive online presence to showcase their services and contact information to potential clients.",
     tasks: [
-      "Designed and developed a responsive user interface using modern web technologies (HTML, Tailwind CSS).",
-      "Optimized website performance and ensured cross-browser compatibility.",
-      "Deployed and managed the website hosting via Cloudflare Pages for fast and reliable access.",
-      "Structured the layout to present business services clearly and professionally."
-    ]
+    "Designed and developed a responsive user interface using modern web technologies (HTML, Tailwind CSS).",
+    "Optimized website performance and ensured cross-browser compatibility.",
+    "Deployed and managed the website hosting via Cloudflare Pages for fast and reliable access.",
+    "Structured the layout to present business services clearly and professionally."
+  ]
   }
 ];
 ---
@@ -87,10 +88,19 @@ const projects = [
                 <p class="text-[#b084ff] text-[10px] md:text-xs lg:text-sm mt-2 font-serif italic opacity-80 uppercase tracking-widest">
                   {project.subtitle}
                 </p>
+                {project.tags && (
+                 <div class="flex flex-wrap gap-2 mt-3">
+                 {project.tags.map(tag => (
+                  <span class="px-2 py-0.5 text-[10px] rounded-full border border-[#d4af37]/40 text-[#d4af37]">
+                  {tag}
+                </span>
+                 ))}
               </div>
-            </div>
+                )}
+              </div>
+              </div>
 
-            <div class="px-4 md:px-6 py-6 md:py-8 grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-10">
+               <div class="px-4 md:px-6 py-6 md:py-8 grid grid-cols-1 md:grid-cols-5 gap-6 md:gap-10">
               
               <div class="md:col-span-5">
                 <p class="text-gray-300 leading-relaxed text-sm md:text-base font-light opacity-80">
